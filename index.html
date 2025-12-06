@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Your Name – Academic Website</title>
+  <style>
+    :root {
+      --bg: #f7f7f8;
+      --fg: #111111;
+      --muted: #666666;
+      --accent: #2f5aac;
+      --card-bg: #ffffff;
+      --border: #e0e0e0;
+      --max-width: 880px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      border-bottom: 1px solid var(--border);
+      background-color: #ffffffcc;
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+
+    .nav-title {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem 3rem 1.25rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    h1, h2, h3 {
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+    }
+
+    h1 {
+      font-size: 1.9rem;
+      margin-bottom: 0.35rem;
+    }
+
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.35rem;
+    }
+
+    .subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .home-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 1.25rem;
+    }
+
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.25rem;
+    }
+
+    .card-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .list-item {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .list-item:last-child {
+      border-bottom: none;
+    }
+
+    .item-title {
+      font-weight: 500;
+      margin-bottom: 0.15rem;
+    }
+
+    .item-venue {
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .item-links {
+      font-size: 0.85rem;
+      margin-top: 0.2rem;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-left: 0.35rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1rem 1.25rem 1.5rem 1.25rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    @media (max-width: 720px) {
+      .home-layout {
+        grid-template-columns: 1fr;
+      }
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="nav-title">Your Name</div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#publications">Publications</a>
+        <a href="#presentations">Presentations</a>
+        <a href="#personal">Personal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home">
+      <div class="home-layout">
+        <div>
+          <h1>Your Name</h1>
+          <div class="subtitle">
+            Your Role / Degrees · Your Institution
+          </div>
+          <p>
+            One or two concise sentences describing your research interests
+            and what you work on. Keep it specific and factual.
+          </p>
+        </div>
+        <div>
+          <div class="card">
+            <div class="card-title">Contact</div>
+            <p class="meta">
+              Email: <a href="mailto:you@university.edu">you@university.edu</a><br />
+              Department, Institution<br />
+              City, State, Country
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul class="list">
+        <li class="list-item">
+          <div class="item-title">
+            “Title of Your Paper”
+          </div>
+          <div class="item-venue">
+            Your Name, Coauthor Name · <span>Journal / Conference</span> · 2025
+          </div>
+          <div class="item-links">
+            <a href="#" target="_blank" rel="noopener">PDF</a>
+            ·
+            <a href="#" target="_blank" rel="noopener">arXiv</a>
+            <span class="pill">peer-reviewed</span>
+          </div>
+        </li>
+
+        <!-- Duplicate and edit blocks like this for more items -->
+        <li class="list-item">
+          <div class="item-title">
+            “Title of Working Paper”
+          </div>
+          <div class="item-venue">
+            Your Name · <span>In preparation</span>
+          </div>
+          <div class="item-links">
+            <span class="pill">draft</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- PRESENTATIONS -->
+    <section id="presentations">
+      <h2>Presentations</h2>
+      <ul class="list">
+        <li class="list-item">
+          <div class="item-title">
+            “Talk / Poster Title”
+          </div>
+          <div class="item-venue">
+            Conference Name, City, Country · June 2026 ·
+            <span class="meta">Contributed talk</span>
+          </div>
+          <div class="item-links">
+            <a href="#" target="_blank" rel="noopener">Slides</a>
+            ·
+            <a href="#" target="_blank" rel="noopener">Poster</a>
+          </div>
+        </li>
+
+        <li class="list-item">
+          <div class="item-title">
+            “Seminar / Colloquium Title”
+          </div>
+          <div class="item-venue">
+            Department Seminar, Institution · Month Year
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- PERSONAL / BLOG -->
+    <section id="personal">
+      <h2>Personal / Notes</h2>
+
+      <p class="meta">
+        Short, informal notes on research, learning, and related topics. 
+        Entries are intentionally concise.
+      </p>
+
+      <ul class="list">
+        <li class="list-item">
+          <div class="item-title">
+            Post Title One
+          </div>
+          <div class="item-venue">
+            Month Day, Year
+          </div>
+          <p>
+            2–4 sentence summary of the post. You can link to a full post if
+            it lives elsewhere, or keep everything on this page.
+          </p>
+          <div class="item-links">
+            <a href="#">Read more</a>
+          </div>
+        </li>
+
+        <li class="list-item">
+          <div class="item-title">
+            Post Title Two
+          </div>
+          <div class="item-venue">
+            Month Day, Year
+          </div>
+          <p>
+            Another short entry. If you prefer, you can just list bullet-point
+            notes instead of prose.
+          </p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Your Name.
+  </footer>
+
+  <script>
+    // Keep the year in the footer up to date
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
