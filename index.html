@@ -181,6 +181,22 @@
         gap: 0.35rem;
       }
     }
+
+    .photo-card-grid {
+  display: grid;
+  grid-template-columns: 120px 1fr; /* Photo small, card expands */
+  gap: 1rem;
+  align-items: start;
+}
+
+.profile-photo-small {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
   </style>
 </head>
 <body>
@@ -457,12 +473,13 @@
   </main>
 
   
-  <section id="disclaimer" style="margin-top:2rem;">
+<section id="disclaimer" style="margin-top:2rem; text-align:center;">
   <p class="meta">
     All opinions expressed on this website are my own and do not represent the
     views of the University of Georgia or any affiliated organization.
   </p>
 </section>
+
   <footer>
     © <span id="year"></span> James Squires.
   </footer>
