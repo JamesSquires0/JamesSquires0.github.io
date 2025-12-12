@@ -3,556 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="James Squires – Honors Mathematics & Physics at UGA. Physics education, radiative transfer modeling, and QDMs">
-  <meta name="keywords" content="James Squires, UGA, mathematics, physics, AI, Lean4, category theory, type theory, formal verification, research, physics education, quantum deliberation machines, QDMs">
-  <meta name="google-site-verification" content="JBn4eOj1RZPbIQX70OAGod1pmmzkmmOwAXiKeCOvXNs" />
+  <meta name="description" content="James Squires – Honors Mathematics & Physics at UGA" />
   <meta name="author" content="James Squires">
-  <title>James Squires – Academic Website</title>
-  <style>
-    :root {
-      --bg: #f7f7f8;
-      --fg: #111111;
-      --muted: #666666;
-      --accent: #2f5aac;
-      --card-bg: #ffffff;
-      --border: #e0e0e0;
-      --max-width: 880px;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   sans-serif;
-      background-color: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
-    }
-
-    a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-
-    header {
-      border-bottom: 1px solid var(--border);
-      background-color: #ffffffcc;
-      backdrop-filter: blur(6px);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .nav {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 0.75rem 1.25rem;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-    }
-
-    .nav-title {
-      font-weight: 600;
-      font-size: 1rem;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 1rem;
-      font-size: 0.95rem;
-    }
-
-    main {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 1.75rem 1.25rem 3rem 1.25rem;
-    }
-
-    section {
-      margin-bottom: 2.5rem;
-    }
-
-    h1, h2, h3 {
-      font-weight: 600;
-      margin: 0 0 0.5rem 0;
-    }
-
-    h1 {
-      font-size: 1.9rem;
-      margin-bottom: 0.35rem;
-    }
-
-    h2 {
-      font-size: 1.3rem;
-      margin-bottom: 0.75rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.35rem;
-    }
-
-    .subtitle {
-      font-size: 0.98rem;
-      color: var(--muted);
-      margin-bottom: 0.85rem;
-    }
-
-    .home-layout {
-      display: grid;
-      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-      gap: 1.25rem;
-    }
-
-    .card {
-      background-color: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.1rem 1.25rem;
-    }
-
-    .card-title {
-      font-weight: 600;
-      font-size: 0.95rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .meta {
-      font-size: 0.85rem;
-      color: var(--muted);
-    }
-
-    .list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .list-item {
-      padding: 0.75rem 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .list-item:last-child {
-      border-bottom: none;
-    }
-
-    .item-title {
-      font-weight: 500;
-      margin-bottom: 0.15rem;
-    }
-
-    .item-venue {
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
-
-    .item-links {
-      font-size: 0.85rem;
-      margin-top: 0.2rem;
-    }
-
-    .pill {
-      display: inline-block;
-      padding: 0.05rem 0.45rem;
-      border-radius: 999px;
-      border: 1px solid var(--border);
-      font-size: 0.75rem;
-      color: var(--muted);
-      margin-left: 0.35rem;
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 1rem 1.25rem 1.5rem 1.25rem;
-      font-size: 0.8rem;
-      color: var(--muted);
-      max-width: var(--max-width);
-      margin: 0 auto;
-    }
-
-    @media (max-width: 720px) {
-      .home-layout {
-        grid-template-columns: 1fr;
-      }
-      .nav {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.35rem;
-      }
-    }
-
-    #disclaimer {
-  text-align: center;
-}
-
-    .photo-card-grid {
-  display: grid;
-  grid-template-columns: 160px 1fr; /* Photo small, card expands */
-  gap: 1rem;
-  align-items: start;
-}
-
-.profile-photo-small {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 11px;
-  border: 1px solid var(--border);
-}
-
-  </style>
+  <title>James Squires</title>
+  <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
   <header>
     <div class="nav">
       <div class="nav-title">James Squires</div>
-     <nav class="nav-links">
-      <a href="#home">Home</a>
-      <a href="#bio">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#presentations">Presentations</a>
-      <a href="#awards">Awards</a>
-      <a href="#mentoring">Mentoring</a>
-      <a href="#personal">Notes</a>
-      <a href="#funfacts">Fun Facts</a>
-    </nav>
-
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/cv/">CV</a>
+        <a href="/notes/">Notes & Articles</a>
+        <a href="/blog/">Blog</a>
+      </nav>
     </div>
   </header>
 
   <main>
-    <!-- HOME -->
     <section id="home">
       <div class="home-layout">
         <div>
           <h1>James Squires</h1>
           <div class="subtitle">
-            Honors Mathematics, Physics · University of Georgia
+            Honors Mathematics & Physics · University of Georgia
           </div>
-      <div>
-   <div class="right-column">
-  <div class="photo-card-grid">
-    <img src="Me.jpg" alt="James Squires" class="profile-photo-small">
 
-    <div class="card">
-      <div class="card-title">Contact</div>
-      <p class="meta">
-        Email: <a href="mailto:jamessquireshome@gmail.com">jamessquireshome@gmail.com</a><br />
-        Physics, Mathematics, UGA<br />
-        Athens, GA, United States
-      </p>
-    </div>
-  </div>
-</div>
+          <section id="bio">
+            <h2 style="margin-top:2.5rem;">About</h2>
+            <p>I'm an honors mathematics and physics major at UGA. I currently have aspirations of building safer and more powerful AI. Ultimately I'd want to see a world where AI can legitimately perform reasoning and complex tasks alongside humans. The computational ability of computers would enable development of theories in otherwise intractable complex systems, opening up paths that we never thought possible.</p>
+            <p>I currently do research at UGA in:</p>
+            <ul>
+              <li>Machine learning + persistent homology for physics education</li>
+              <li>Non-LTE radiative transfer modeling + best-fit in protoplanetary disks using Radex</li>
+              <li>Categorical semantics of QDMs</li>
+            </ul>
+            <p>I intend to do a PhD in formal verification. I'm interested in investigating AI interpretability and safety through a mathematical lens. I naively suspect that homotopy type theory is a promising lead here.</p>
+          </section>
 
+          <section id="interests" style="margin-top:2rem;">
+            <h2>Interests</h2>
+            <ul>
+              <li>Lean4</li>
+              <li>Lambda calculus</li>
+              <li>Martin-Löf Type Theory and other Dependent Type Theories</li>
+              <li>Category Theory</li>
+              <li>Homotopy Type Theory</li>
+              <li>Mathematics of AI</li>
+            </ul>
+          </section>
 
-      </div>
-        </section>
-
-      <section id="bio">
-  <h2>Bio</h2>
-  <p>
-  I'm an honors mathematics and physics major at UGA. I currently have aspirations
-  of building safer and more powerful AI. Ultimately I'd want to see a world where
-  AI can legitimately perform reasoning and complex tasks alongside humans. The
-  computational ability of computers would enable development of theories in 
-  otherwise intractable complex systems, opening up paths that we never thought possible.
-  </p>
-  <p>I currently do research at UGA in:</p>
-    <ul style="margin-top: -0.5rem;">
-    <li>Machine learning + persistent homology for physics education</li>
-    <li>Non-LTE radiative transfer modeling + best-fit in protoplanetary disks using Radex</li>
-    <li>Categorical semantics of QDMs</li>
-    </ul>
-   <p>I intend to do a PhD in formal verification. I'm interested in investigating
-      AI interpretability and safety through a mathematical lens. I naively suspect that
-      homotopy type theory is a promising lead here.</p>
-</section>
-
-    <section id="Interests">
-          <h2>Interests</h2>
-          <p>
-          I'm currently working toward a better understanding of: , 
-          <ul style="margin-top: -0.5rem;">
-            <li>Lean4</li>
-            <li>Lambda calculus</li>
-            <li>Martin-Löf Type Theory and other Dependent Type Theories</li>
-            <li>Category Theory</li>
-            <li>Homotopy Type Theory</li>
-            <li>Mathematics of AI</li>
-          </ul>
-          </p>
+          <section id="funfacts" style="margin-top:2.5rem;">
+            <h2>Fun Facts</h2>
+            <ul>
+              <li>I was a former competitive gamer in League of Legends. I achieved rank 1 Viktor in the world and held this for some time (top 150 challenger). Don't worry though, I no longer play video games</li>
+              <li>I built a cabin from scratch with a hatchet in the rural UP of Michigan one time</li>
+              <li>I play the didgeridoo and piano (not well)</li>
+              <li>I read ancient Greek, my favorite authors are Heraclitus and Euclid</li>
+            </ul>
+          </section>
         </div>
+
+        <div class="right-column">
+          <div class="photo-card-grid">
+            <img src="/assets/Me.jpg" alt="James Squires" class="profile-photo-small">
+            <div class="card">
+              <div class="card-title">Contact</div>
+              <p class="meta">
+                Email: <a href="mailto:jamessquireshome@gmail.com">jamessquireshome@gmail.com</a><br />
+                Physics & Mathematics · UGA<br />
+                Athens, GA, United States
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
-    
-    <!-- PUBLICATIONS -->
-    <section id="publications">
-      <h2>Publications</h2>
-      <ul class="list">
-        <!-- Duplicate and edit blocks like this for more items -->
-        <li class="list-item">
-          <div class="item-title">
-            “Predicting STEM Classroom Attrition Via Data Mining of Social Dynamics and Academic Metrics”
-          </div>
-          <div class="item-venue">
-            James Squires, Nicholas T. Young, Nandana Weliweriya · <span>In preparation</span>
-          </div>
-          <div class="item-links">
-            <span class="pill">draft</span>
-          </div>
-        </li>
-      </ul>
-    </section>
-
-    <!-- ==================== ARTICLES & WRITING SECTION ==================== -->
-<section id="articles" class="section">
-  <h2>
-    Articles & Essays
-  </h2>
-  
-  <div class="articles-list">
-    
-    <div class="article-item" style="margin-bottom: 2rem; padding-bottom: 1rem; border-bottom: 1px dashed #ddd;">
-      <h3 style="margin: 0 0 0.4rem 0; font-size: 1.25rem;">
-        <a href="https://www.theinterstellarobserver.com/articles/history/a-contemporary-analysis-of-archimedes-lever" 
-           style="color: #2c3e50; text-decoration: none;" 
-           onmouseover="this.style.textDecoration='underline'" 
-           onmouseout="this.style.textDecoration='none'">
-          A Contemporary Analysis of Archimedes’ Lever
-        </a>
-      </h3>
-      <p style="margin: 0.4rem 0; color: #555; font-size: 0.95rem;">
-        <em>The Interstellar Observer</em> • 2025
-      </p>
-      <p style="margin: 0.5rem 0 0 0; color: #444; line-height: 1.5;">
-        A beginner-friendly dive into Archimedes’ law of the lever, its original proofs, 
-        and how it connects to modern Newtonian mechanics — complete with the classic 
-        “give me a lever long enough” thought experiment.
-      </p>
-    </div>
-    
-    <!-- Add more casual articles here in the same format -->
-    
-  </div>
-  
-  <p style="margin-top: 2.5rem; font-size: 0.9rem; color: #777; text-align: center;">
-    (For peer-reviewed research papers, see the 
-    <a href="#publications">Publications</a> section above.)
-  </p>
-</section>
-    
-    <!-- PRESENTATIONS -->
-   <section id="presentations">
-  <h2>Presentations</h2>
-  <ul class="list">
-    <li class="list-item">
-      <div class="item-title">
-        Constructivism and Applications
-      </div>
-      <div class="item-venue">
-        UGA Mathematics Directed Reading Program (DRP), Poultry Science Building, Athens, GA · November 2025 ·
-        <span class="meta">Oral presentation</span>
-      </div>
-    </li>
-
-    <li class="list-item">
-      <div class="item-title">
-        Data Analysis Techniques in Physics
-      </div>
-      <div class="item-venue">
-        UGA Physics Club, Physics Building, Athens, GA · October 2025 ·
-        <span class="meta">Workshop (instructor)</span>
-      </div>
-    </li>
-
-    <li class="list-item">
-      <div class="item-title">
-        Improving STEM Education by Predicting Classroom Performance Via Statistical Modeling Trained with Student Social Dynamics
-      </div>
-      <div class="item-venue">
-        CURO Summer Fellows Forum, Delta Innovation Hub, Athens, GA · July 2025 ·
-        <span class="meta">Oral presentation</span>
-      </div>
-    </li>
-
-    <li class="list-item">
-      <div class="item-title">
-        Social Dynamics in Introductory Physics Classroom Predictive Analytics
-      </div>
-      <div class="item-venue">
-        CURO Symposium, Classic Center, Athens, GA · April 2025 ·
-        <span class="meta">Poster presentation</span>
-      </div>
-    </li>
-
-    <li class="list-item">
-      <div class="item-title">
-        Legendrian Curves and Knots
-      </div>
-      <div class="item-venue">
-        UGA Mathematics Directed Reading Program (DRP), Poultry Science Building, Athens, GA · December 2024 ·
-        <span class="meta">Oral presentation</span>
-      </div>
-    </li>
-
-    <li class="list-item">
-      <div class="item-title">
-        STEM Education Predictive Statistical Learning Model
-      </div>
-      <div class="item-venue">
-        CURO Symposium, Classic Center, Athens, GA · April 2024 ·
-        <span class="meta">Poster presentation</span>
-      </div>
-    </li>
-  </ul>
-</section>
-
-    
-    <!-- AWARDS -->
-    <section id="awards">
-  <h2>Awards &amp; Honors</h2>
-  <ul class="list">
-    <li class="list-item">
-      <div class="item-title">Barry Goldwater Scholarship — UGA Nominee (2026)</div>
-      <div class="item-venue">December 2025</div>
-    </li>
-
-    <li class="list-item">
-      <div class="item-title">CURO Summer Research Fellow</div>
-      <div class="item-venue">May 2025</div>
-    </li>
-
-    <li class="list-item">
-      <div class="item-title">CURO Research Award</div>
-      <div class="item-venue">August 2024</div>
-    </li>
-
-    <li class="list-item">
-      <div class="item-title">Morehead Honors College</div>
-      <div class="item-venue">August 2023</div>
-    </li>
-
-    <li class="list-item">
-      <div class="item-title">Zell Miller Scholarship</div>
-      <div class="item-venue">January 2023</div>
-    </li>
-  </ul>
-</section>
-
-
-    <section id="mentoring">
-  <h2>Mentoring &amp; Outreach</h2>
-  <ul class="list">
-    <li class="list-item">
-      <div class="item-title">
-        Creator and Director, Physics Directed Reading Program (DRP) at UGA
-      </div>
-      <div class="item-venue">
-        Department of Physics &amp; Astronomy, University of Georgia · August 2025 – Present
-      </div>
-    </li>
-
-    <li class="list-item">
-      <div class="item-title">
-        Mentor, COSMOS Physics Mentoring Program
-      </div>
-      <div class="item-venue">
-        University of Georgia · August 2024 – August 2025
-      </div>
-    </li>
-  </ul>
-</section>
-
-    <!-- PERSONAL / BLOG -->
-    <section id="personal">
-      <h2>Professional Notes</h2>
-
-      <p class="meta">
-        All accuracy I credit to Lean4 typechecking and all
-        misunderstandings I credit to myself. Feel free to contact me
-        about both anything you found interesting or any
-        errors in my writeups.
-      </p>
-
-      <ul class="list">
-        <li class="list-item">
-          <div class="item-title">
-            Basic Analysis in Lean4: A Walk Through</div>
-          <div class="item-venue">December 2025</div>
-          <p>
-            I try to introduce Lean4 for the computer illiterate mathematician.
-            It should be noted that I intentionally omit a fair amount of
-            type theory for informal explanations of certain topics. It should
-            also be noted that I'm a complete novice on the topic, so it's likely
-            that I've misrepresented some fundamental concepts, although I suspect
-            the majority of this content is correct
-            <div class="item-links">
-          <a href="LeanRealAnalysis.pdf" target="_blank">PDF</a>
-          </div>
-          </p>
-        </li>
-
-        <div class="professional-note">
-                    <div class="item-title">
-            Analysis of Rayleigh Number Sensitivity in Echo State Network Forecasting of Lorenz Systems</div>
-          <div class="item-venue">December 2025</div>
-  <p>
-    I perform an analysis on a Lorenz63 trained ESN, varying rho and analyzing MSE of 100 step forecasts.
-  <p>
-     <div class="item-links">
-          <a href="Lorenz63_ESN_Rho_Variation.pdf" target="_blank">PDF</a>
-          </div>
-        <div class="item-links">
-          <a href="Lorenz_ESN_Rho_Variation.pdf" target="_blank">PDF</a>
-                    <a href="https://github.com/JamesSquires0/Lorenz_ESN_Rho_Variation" target="_blank">Source code & data on GitHub</a> (Apache license v2.0)<br>
-    DOI: 10.5281/zenodo.17915473
-          </div>
-
-</div>
-
-        
-        
-         
-      </ul>
-    </section>
-
-          <section id="funfacts">
-  <h2>Fun Facts</h2>
-  <p>
-    <p>Fun facts:</p>
-    <ul style="margin-top: -0.5rem;">
-    <li>I was a former competitive gamer in League of Legends. I achieved rank 1 Viktor
-    in the world and held this for some time (top 150 challenger). Don't worry though, I
-    no longer play video games</li>
-    <li>I built a cabin from scratch with a hatchet in the rural UP of Michigan one time</li>
-    <li>I play the didgeridoo and piano (not well)</li>
-    <li>I read ancient Greek, my favorite authors are Heraclitus and Euclid</li>
-    </ul>
-  </p>
-</section>
-    
   </main>
 
-  
-<section id="disclaimer" style="margin-top:2rem; text-align:center;">
-  <p class="meta">
-    All opinions expressed on this website are my own and do not represent the
-    views of the University of Georgia or any affiliated organization.
-  </p>
-</section>
+  <section id="disclaimer" style="margin:4rem 0 2rem; text-align:center;">
+    <p class="meta">
+      All opinions expressed on this website are my own and do not represent the views of the University of Georgia or any affiliated organization.
+    </p>
+  </section>
 
   <footer>
     © <span id="year"></span> James Squires.
   </footer>
-
   <script>
-    // Keep the year in the footer up to date
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 </body>
