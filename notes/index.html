@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notes & Articles – James Squires</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="nav-title">James Squires</div>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/cv/">CV</a>
+        <a href="/notes/">Notes & Articles</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Technical Notes & Articles</h1>
+
+    <section id="professional-notes">
+      <h2>Professional Notes</h2>
+      <p class="meta">
+        All accuracy I credit to Lean4 typechecking and all misunderstandings I credit to myself.
+      </p>
+      <ul class="list">
+        <li class="list-item">
+          <div class="item-title">Basic Analysis in Lean4: A Walk Through</div>
+          <div class="item-venue">December 2025</div>
+          <div class="item-links">
+            <a href="/assets/LeanRealAnalysis.pdf" target="_blank">PDF</a>
+          </div>
+        </li>
+        <li class="list-item">
+          <div class="item-title">Analysis of Rayleigh Number Sensitivity in Echo State Network Forecasting of Lorenz Systems</div>
+          <div class="item-venue">December 2025</div>
+          <div class="item-links">
+            <a href="/assets/Lorenz63_ESN_Rho_Variation.pdf" target="_blank">PDF</a> •
+            <a href="https://github.com/JamesSquires0/Lorenz_ESN_Rho_Variation" target="_blank">Source code</a><br>
+            DOI: 10.5281/zenodo.17915473
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="articles">
+      <h2>Articles & Essays</h2>
+      <div class="article-item" style="margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px dashed #ddd;">
+        <h3 style="margin:0 0 0.4rem 0;font-size:1.25rem;">
+          <a href="https://www.theinterstellarobserver.com/articles/history/a-contemporary-analysis-of-archimedes-lever">
+            A Contemporary Analysis of Archimedes’ Lever
+          </a>
+        </h3>
+        <p style="margin:0.4rem 0;color:#555;font-size:0.95rem;">
+          <em>The Interstellar Observer</em> • 2025
+        </p>
+        <p style="margin:0.5rem 0 0 0;color:#444;line-height:1.5;">
+          A beginner-friendly dive into Archimedes’ law of the lever, its original proofs, and how it connects to modern Newtonian mechanics.
+        </p>
+      </div>
+      <!-- add more articles the same way -->
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> James Squires.
+  </footer>
+  <script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
