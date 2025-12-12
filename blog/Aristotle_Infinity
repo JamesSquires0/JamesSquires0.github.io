@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thoughts on Lean4 for Mathematicians – James Squires</title>
+  <meta name="description" content="A short introduction to why Lean4 matters for working mathematicians."> <!-- change this -->
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="nav-title">James Squires</div>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/cv/">CV</a>
+        <a href="/notes/">Notes & Articles</a>
+        <a href="/blog/">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article>
+      <h1>Aristotle's Infinity</h1>
+      
+      <p class="meta" style="margin-bottom: 2rem;">
+        James Squires • December 12, 2025
+      </p>
+
+      <p>
+      Aristotle 
+      </p>
+
+      
+    </article>
+  </main>
+
+  <footer>
+    © <span id="year"></span> James Squires.
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
