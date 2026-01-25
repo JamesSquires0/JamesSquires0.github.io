@@ -9,11 +9,22 @@
   <link rel="stylesheet" href="/css/style.css" />
   
   <style>
-    /* These additions will bridge the gap between plain HTML and a polished look */
+    /* Your existing styles */
     :root {
       --uga-red: #ba0c2f;
       --text-main: #2d3436;
       --text-light: #636e72;
+    }
+
+    /* New styling for the Greek text */
+    .epigraph {
+      text-align: center;
+      font-style: italic;
+      letter-spacing: 0.15em;
+      color: var(--text-light);
+      margin: 2rem 0;
+      font-family: serif;
+      font-size: 1.2rem;
     }
 
     .home-layout {
@@ -75,7 +86,7 @@
 
     @media (max-width: 768px) {
       .home-layout { grid-template-columns: 1fr; }
-      .right-column { order: -1; } /* Photo moves to top on mobile */
+      .right-column { order: -1; } 
     }
   </style>
 </head>
@@ -92,6 +103,8 @@
   </header>
 
   <main class="content">
+    <div class="epigraph">ΦΥΣΙΣ ΚΡΥΠΤΕΣΘΑΙ ΦΙΛΕΙ</div>
+
     <section id="home">
       <div class="home-layout">
         
