@@ -5,8 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="James Squires – Honors Mathematics & Physics at UGA" />
   <meta name="author" content="James Squires">
-  <title>James Squires</title>
+  <title>James Squires | UGA Mathematics & Physics</title>
   <link rel="stylesheet" href="/css/style.css" />
+  
+  <style>
+    /* These additions will bridge the gap between plain HTML and a polished look */
+    :root {
+      --uga-red: #ba0c2f;
+      --text-main: #2d3436;
+      --text-light: #636e72;
+    }
+
+    .home-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      color: var(--text-light);
+      margin-bottom: 2rem;
+    }
+
+    .subtitle a {
+      color: var(--uga-red);
+      text-decoration: none;
+      font-weight: 600;
+      border-bottom: 1px solid transparent;
+    }
+
+    .subtitle a:hover {
+      border-bottom: 1px solid var(--uga-red);
+    }
+
+    .right-column {
+      position: sticky;
+      top: 2rem;
+    }
+
+    .photo-card-grid img {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .card {
+      padding: 1.5rem;
+      background: #fdfdfd;
+      border: 1px solid #eee;
+      border-radius: 8px;
+    }
+
+    .card-title {
+      text-transform: uppercase;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      color: var(--text-light);
+      margin-bottom: 0.5rem;
+    }
+
+    address {
+      font-style: normal;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    @media (max-width: 768px) {
+      .home-layout { grid-template-columns: 1fr; }
+      .right-column { order: -1; } /* Photo moves to top on mobile */
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -20,56 +91,62 @@
     </div>
   </header>
 
-  <main>
+  <main class="content">
     <section id="home">
       <div class="home-layout">
-        <div>
+        
+        <article>
           <h1>James Squires</h1>
-          <div class="subtitle">
-            Honors Mathematics & Physics · University of Georgia · <a href="CV_JS_01_25.pdf">CV (PDF)</a>
-
-          </div>
+          <p class="subtitle">
+            Honors Mathematics & Physics · University of Georgia · 
+            <a href="CV_JS_01_25.pdf" aria-label="Download CV PDF">📄 CV (PDF)</a>
+          </p>
 
           <section id="bio">
-            <h2 style="margin-top:2.5rem;">About</h2>
-            <p>I'm an honors mathematics and physics undergrad at UGA.
+            <h2>About</h2>
+            <p>
+              I am an honors mathematics and physics undergraduate at the University of Georgia. 
+            </p>
           </section>
 
-          <section id="interests" style="margin-top:2rem;">
+          <section id="interests">
             <h2>Interests</h2>
-            <ul>
-              <li>Cybernetics</li>
-              <li>Logic</li>
+            <ul class="interest-list">
+              <li><strong>Cybernetics:</strong> Categorical AI, quantum deliberative machines, machine learning.</li>
+              <li><strong>Logic:</strong> Formal methods, category theory, dependent type theory.</li>
             </ul>
           </section>
-        </div>
+        </article>
 
-        <div class="right-column">
+        <aside class="right-column">
           <div class="photo-card-grid">
-            <img src="/Me.jpg" alt="James Squires" class="profile-photo-small">
+            <img src="/Me.jpg" alt="James Squires" class="profile-photo">
+            
             <div class="card">
-              <div class="card-title">Contact</div>
-              <p class="meta">
-                Email: <a href="mailto:jamessquireshome@gmail.com">jamessquireshome@gmail.com</a><br />
-                Physics & Mathematics · UGA<br />
-                Athens, GA, United States
-              </p>
+              <div class="card-title">Contact Information</div>
+              <address>
+                <strong>Email:</strong> <a href="mailto:jamessquireshome@gmail.com">jamessquireshome@gmail.com</a><br />
+                <strong>Department:</strong> Physics & Mathematics, UGA<br />
+                <strong>Location:</strong> Athens, GA, USA
+              </address>
             </div>
           </div>
-        </div>
+        </aside>
+
       </div>
     </section>
   </main>
 
-  <section id="disclaimer" style="margin:4rem 0 2rem; text-align:center;">
-    <p class="meta">
+  <section id="disclaimer">
+    <p class="meta-notice">
       All opinions expressed on this website are my own and do not represent the views of the University of Georgia or any affiliated organization.
     </p>
   </section>
 
   <footer>
-    © <span id="year"></span> James Squires.
+    <p>&copy; <span id="year"></span> James Squires.</p>
   </footer>
+
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
