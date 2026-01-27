@@ -9,46 +9,105 @@
   <link rel="stylesheet" href="/css/style.css" />
   
   <style>
-    /* Your existing styles */
     :root {
+      --bg: #ffffff;
+      --text: #222;
+      --accent: #0066cc; /* Matches the blog accent */
       --uga-red: #ba0c2f;
-      --text-main: #2d3436;
-      --text-light: #636e72;
+      --meta: #666;
+      --border: #eee;
     }
 
-    /* New styling for the Greek text */
+    body {
+      font-family: "Georgia", serif;
+      line-height: 1.6;
+      color: var(--text);
+      background: var(--bg);
+      margin: 0;
+      padding: 0;
+    }
+
+    header, main, footer {
+      max-width: 850px; /* Slightly wider for the two-column layout */
+      margin: 0 auto;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1rem;
+    }
+
+    .nav-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      font-family: "Georgia", serif;
+    }
+
+    .nav-links a {
+      margin-left: 1rem;
+      text-decoration: none;
+      color: var(--accent);
+      font-family: sans-serif;
+      font-size: 0.9rem;
+    }
+
     .epigraph {
       text-align: center;
       font-style: italic;
       letter-spacing: 0.15em;
-      color: var(--text-light);
-      margin: 2rem 0;
-      font-family: serif;
+      color: var(--meta);
+      margin: 3rem 0;
       font-size: 1.2rem;
     }
 
-    .home-layout {
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 3rem;
-      align-items: start;
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      border-left: 3px solid var(--accent);
+      padding-left: 1rem;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
     }
 
     .subtitle {
       font-size: 1.1rem;
-      color: var(--text-light);
+      color: var(--meta);
       margin-bottom: 2rem;
+      font-family: sans-serif;
     }
 
     .subtitle a {
       color: var(--uga-red);
       text-decoration: none;
       font-weight: 600;
-      border-bottom: 1px solid transparent;
     }
 
     .subtitle a:hover {
-      border-bottom: 1px solid var(--uga-red);
+      text-decoration: underline;
+    }
+
+    .home-layout {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 3rem;
+      align-items: start;
+    }
+
+    .interest-list {
+      padding-left: 1.2rem;
+    }
+
+    .interest-list li {
+      margin-bottom: 0.8rem;
     }
 
     .right-column {
@@ -56,41 +115,60 @@
       top: 2rem;
     }
 
-    .photo-card-grid img {
+    .profile-photo {
       width: 100%;
-      border-radius: 12px;
+      border-radius: 8px;
       margin-bottom: 1.5rem;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      filter: grayscale(20%); /* Adds a slight academic feel */
     }
 
     .card {
-      padding: 1.5rem;
-      background: #fdfdfd;
-      border: 1px solid #eee;
-      border-radius: 8px;
+      padding: 1.2rem;
+      background: #fafafa;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 0.9rem;
     }
 
     .card-title {
       text-transform: uppercase;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       letter-spacing: 0.1em;
-      color: var(--text-light);
-      margin-bottom: 0.5rem;
+      color: var(--meta);
+      margin-bottom: 0.8rem;
+      font-weight: bold;
+      font-family: sans-serif;
     }
 
     address {
       font-style: normal;
-      font-size: 0.9rem;
-      line-height: 1.4;
+      line-height: 1.5;
+    }
+
+    .meta-notice {
+      font-size: 0.8rem;
+      color: var(--meta);
+      font-style: italic;
+      margin-top: 4rem;
+      text-align: center;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--meta);
+      margin-top: 2rem;
+      border-top: 1px solid var(--border);
     }
 
     @media (max-width: 768px) {
       .home-layout { grid-template-columns: 1fr; }
-      .right-column { order: -1; } 
+      .right-column { order: -1; margin-bottom: 2rem; }
     }
   </style>
 </head>
 <body>
+
   <header>
     <div class="nav">
       <div class="nav-title">James Squires</div>
@@ -102,59 +180,58 @@
     </div>
   </header>
 
-  <main class="content">
+  <main>
     <div class="epigraph">ΦΥΣΙΣ ΚΡΥΠΤΕΣΘΑΙ ΦΙΛΕΙ</div>
 
-    <section id="home">
-      <div class="home-layout">
-        
-        <article>
-          <h1>James Squires</h1>
-          <p class="subtitle">
-            Honors Mathematics & Physics · University of Georgia · 
-            <a href="CV_JS_01_25.pdf" aria-label="Download CV PDF"> CV </a>
+    <div class="home-layout">
+      <article>
+        <h1>James Squires</h1>
+        <p class="subtitle">
+          Honors Mathematics & Physics · University of Georgia · 
+          <a href="CV_JS_01_25.pdf" aria-label="Download CV PDF">CV</a>
+        </p>
+
+        <section id="bio">
+          <h2>About</h2>
+          <p>
+            I am an honors mathematics and physics undergraduate at the University of Georgia. My work focuses on the intersection of formal logic, categorical structures, and theoretical physics.
           </p>
+        </section>
 
-          <section id="bio">
-            <h2>About</h2>
-            <p>
-              I am an honors mathematics and physics undergraduate at the University of Georgia. 
-            </p>
-          </section>
+        <section id="interests">
+          <h2>Interests</h2>
+          <ul class="interest-list">
+            <li><strong>Cybernetics:</strong> Categorical AI, categorical quantum deliberative machines, and machine learning.</li>
+            <li><strong>Logic:</strong> Formal methods, category theory, and dependent-type theory.</li>
+          </ul>
+        </section>
+      </article>
 
-          <section id="interests">
-            <h2>Interests</h2>
-            <ul class="interest-list">
-              <li><strong>Cybernetics:</strong> Categorical AI, categorical quantum deliberative machines, machine learning.</li>
-              <li><strong>Logic:</strong> Formal methods, category theory, dependent-type theory.</li>
-            </ul>
-          </section>
-        </article>
-
-        <aside class="right-column">
-          <div class="photo-card-grid">
-            <img src="/Me.jpg" alt="James Squires" class="profile-photo">
-            
-            <div class="card">
-              <div class="card-title">Contact Information</div>
-              <address>
-                <strong>Email:</strong> <a href="mailto:jamessquireshome@gmail.com">jamessquireshome@gmail.com</a><br />
-                <strong>Majors:</strong> Physics, Mathematics, UGA<br />
-                <strong>Location:</strong> Athens, GA, USA
-              </address>
-            </div>
+      <aside class="right-column">
+        <div class="photo-card-grid">
+          <img src="/Me.jpg" alt="James Squires" class="profile-photo">
+          
+          <div class="card">
+            <div class="card-title">Contact Information</div>
+            <address>
+              <strong>Email:</strong> <br>
+              <a href="mailto:jamessquireshome@gmail.com" style="color: var(--accent); text-decoration: none;">jamessquireshome@gmail.com</a><br><br>
+              <strong>Majors:</strong> <br>
+              Physics & Mathematics, UGA<br><br>
+              <strong>Location:</strong> <br>
+              Athens, GA, USA
+            </address>
           </div>
-        </aside>
+        </div>
+      </aside>
+    </div>
 
-      </div>
+    <section id="disclaimer">
+      <p class="meta-notice">
+        All opinions expressed on this website are my own and do not represent the views of the University of Georgia or any affiliated organization.
+      </p>
     </section>
   </main>
-
-  <section id="disclaimer">
-    <p class="meta-notice">
-      All opinions expressed on this website are my own and do not represent the views of the University of Georgia or any affiliated organization.
-    </p>
-  </section>
 
   <footer>
     <p>&copy; <span id="year"></span> James Squires.</p>
