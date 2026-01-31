@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Discovering Linear Logic, Projective Geometry, and Monoidal Categories – James Squires</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #222;
+            --accent: #0066cc;
+            --meta: #666;
+            --border: #eee;
+        }
+
+        body {
+            font-family: "Georgia", serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header, main, footer {
+            width: 100%;
+            max-width: 750px;
+            padding: 2rem;
+            box-sizing: border-box;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+        }
+
+        .nav-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .nav-links a {
+            margin-left: 1rem;
+            text-decoration: none;
+            color: var(--accent);
+            font-family: sans-serif;
+            font-size: 0.9rem;
+        }
+
+        .epigraph {
+            text-align: center;
+            font-style: italic;
+            letter-spacing: 0.15em;
+            color: var(--meta);
+            margin: 3rem 0;
+            font-size: 1.1rem;
+            line-height: 1.4;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            line-height: 1.2;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta {
+            color: var(--meta);
+            font-style: italic;
+            font-size: 0.9rem;
+            margin-bottom: 3rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            border-left: 3px solid var(--accent);
+            padding-left: 1rem;
+            margin-top: 2.5rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            text-align: justify;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--meta);
+            margin-top: 4rem;
+            border-top: 1px solid var(--border);
+            padding: 2rem 0;
+        }
+
+        a.text-link {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a.text-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav">
+        <div class="nav-title">James Squires</div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="/notes/">Notes & Articles</a>
+            <a href="/blog/">Blog</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="epigraph">ΑΡΜΟΝΙΗ ΑΦΑΝΗΣ ΦΑΝΕΡΗΣ ΚΡΕΙΣΣΩΝ</div>
+
+    <article>
+        <h1>Discovering Linear Logic, Projective Geometry, and Monoidal Categories</h1>
+        <p class="meta">James Squires • Jan 30, 2026</p>
+
+        <p>My Current Readings::</p>
+
+        <section>
+            <h2>A taste of linear logic by Philip Wadler</h2>
+            <p>Linear logic is metal. I want to understand it. We must consume our hypothesis in order to make a conclusion: this seems to be a notion highly pertinent to quantum mechanics. 
+              When we collapse the wave function through measurement, we receive information (a conclusion) about some spin let's say, but we had to kill our superposition (hypothesis).
+            This resource sensitivity seems be naturally accomodated by linear logic. Furthermore, it seems classical set theory breaks, specifically when we
+            attempt to apply set distributivity on sets of different spinors (like Z_up, X_up, and X_down); this is due to the Uncertainty Principle. Anyways, proof by trust me: it's obvious we need a nicer logic.
+           Wadler's paper so far has been very reader friendly. I found it's concise summary of intuitionistic logic quite powerful. I love the idea of an intuitionistic framework for QM, especially an intuitionistic linear logic.
+            I'm looking forward to reading the rest. I want to follow this up with Linear Logic for Generalized Quantum Mechanics by Vaughan Pratt. And then the big bad wolf would be Dagger Linear Logic. I also know Urs Schrieber
+            developed a Linear Homotopy Type Logic and showed quantization with it? This is quite interesting, as it seems to take the best of all three worlds.</p>
+
+            <h2>Projective Geometry by Coxeter</h2>
+            <p>This book is quite interesting. I personally find geometry a difficult subject, similar to trying to read wall to wall tensors or massive derivation trees; there's a lot to track on the page. Coxeter's book is particularly rewarding though.
+              The axiomatic construction of our synthetic geometry is quite beautiful. Seeing the symmetry come to life is also really something. I'm interested in how we can take projective geometry proofs into Euclidean space and vice versa, especially with Coxeter's axioms.
+              It seems many of the geometers for the time had their own tuned axioms, and learning to track the nuances of these are quite difficult.</p>
+
+            <h2>Categorical Quantum Mechanics</h2>
+            <p>I've begun seeing monoidal categories everywhere I look. It's really uncanny. The Curry-Howard-Lambek correspondence is an extraordinary observation; we can view the world through a programmatic logic, a logic with valuations to truth values (sometimes; if we're a 'radical' constructivist),
+              or through it's compositional structures. Many facets dance on the same face of reality.</p>
+
+        </section>
+
+    </article>
+</main>
+
+<footer>
+    © <span id="year"></span> James Squires.
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
