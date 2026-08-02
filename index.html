@@ -7,178 +7,197 @@
   <meta name="author" content="James Squires">
   <title>James Squires | UGA Mathematics & Physics</title>
   <link rel="stylesheet" href="/css/style.css" />
-  
+
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #222;
-      --accent: #0066cc; /* Matches the blog accent */
-      --uga-red: #ba0c2f;
-      --meta: #666;
-      --border: #eee;
+      --bg: #f7f7f8;
+      --fg: #111111;
+      --muted: #666666;
+      --accent: #2f5aac;
+      --card-bg: #ffffff;
+      --border: #e0e0e0;
+      --max-width: 880px;
     }
-    body::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Places it behind all content */
-    background-image: url('/Hasse_Daigrams_Groups.png'); /* Change to your actual path */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60%; /* Adjust based on how large you want it */
-    opacity: 0.12; /* This makes it a subtle watermark (range 0.0 to 1.0) */
-    pointer-events: none; /* Ensures the image doesn't interfere with clicks */
-}
-    
-    body {
-      font-family: "Georgia", serif;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--bg);
-      margin: 0;
-      padding: 0;
-    }
-
-    header, main, footer {
-      max-width: 850px; /* Slightly wider for the two-column layout */
-      margin: 0 auto;
-      padding: 2rem;
+    * {
       box-sizing: border-box;
     }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1rem;
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
     }
-
-    .nav-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      font-family: "Georgia", serif;
-    }
-
-    .nav-links a {
-      margin-left: 1rem;
-      text-decoration: none;
+    a {
       color: var(--accent);
-      font-family: sans-serif;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      background-color: #ffffffcc;
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+    .nav-title {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem 3rem 1.25rem;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    h1, h2, h3 {
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+    }
+    h1 {
+      font-size: 1.9rem;
+      margin-bottom: 0.35rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.35rem;
+    }
+    .subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+    }
+    .home-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 1.25rem;
+    }
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.25rem;
+    }
+    .card-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .list-item {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .list-item:last-child {
+      border-bottom: none;
+    }
+    .item-title {
+      font-weight: 500;
+      margin-bottom: 0.15rem;
+    }
+    .item-venue {
       font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .item-links {
+      font-size: 0.85rem;
+      margin-top: 0.2rem;
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-left: 0.35rem;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1rem 1.25rem 1.5rem 1.25rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    @media (max-width: 720px) {
+      .home-layout {
+        grid-template-columns: 1fr;
+      }
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+      }
+    }
+    #disclaimer {
+      text-align: center;
+    }
+    .photo-card-grid {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+    .profile-photo-small {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 11px;
+      border: 1px solid var(--border);
     }
 
+    /* Page-specific additions, kept minimal and consistent with the token system above */
     .epigraph {
       text-align: center;
       font-style: italic;
       letter-spacing: 0.15em;
-      color: var(--meta);
-      margin: 3rem 0;
-      font-size: 1.2rem;
+      color: var(--muted);
+      margin: 2.5rem 0 2rem 0;
+      font-size: 1.05rem;
     }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      border-left: 3px solid var(--accent);
-      padding-left: 1rem;
-      margin-top: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    .subtitle {
-      font-size: 1.1rem;
-      color: var(--meta);
-      margin-bottom: 2rem;
-      font-family: sans-serif;
-    }
-
-    .subtitle a {
-      color: var(--uga-red);
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .subtitle a:hover {
-      text-decoration: underline;
-    }
-
-    .home-layout {
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      gap: 3rem;
-      align-items: start;
-    }
-
     .interest-list {
       padding-left: 1.2rem;
+      margin: 0;
     }
-
     .interest-list li {
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.5rem;
     }
-
     .right-column {
-      position: sticky;
-      top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
     }
-
-    .profile-photo {
-      width: 100%;
-      border-radius: 8px;
-      margin-bottom: 1.5rem;
-      filter: grayscale(20%); /* Adds a slight academic feel */
-    }
-
-    .card {
-      padding: 1.2rem;
-      background: #fafafa;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      font-size: 0.9rem;
-    }
-
-    .card-title {
-      text-transform: uppercase;
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      color: var(--meta);
-      margin-bottom: 0.8rem;
-      font-weight: bold;
-      font-family: sans-serif;
-    }
-
     address {
       font-style: normal;
-      line-height: 1.5;
-    }
-
-    .meta-notice {
-      font-size: 0.8rem;
-      color: var(--meta);
-      font-style: italic;
-      margin-top: 4rem;
-      text-align: center;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--meta);
-      margin-top: 2rem;
-      border-top: 1px solid var(--border);
-    }
-
-    @media (max-width: 768px) {
-      .home-layout { grid-template-columns: 1fr; }
-      .right-column { order: -1; margin-bottom: 2rem; }
     }
   </style>
 </head>
@@ -202,39 +221,37 @@
       <article>
         <h1>James Squires</h1>
         <p class="subtitle">
-          Honors Mathematics & Physics · University of Georgia · 
-          Email me for my CV!
+          Honors Mathematics & Physics · University of Georgia · Email me for my CV!
         </p>
 
         <section id="bio">
           <h2>About</h2>
           <p>
-            I am an honors mathematics and physics undergraduate at the University of Georgia. My work tends to deal with logic, AI, and/or physics
+            I am an honors mathematics and physics undergraduate at the University of Georgia. My work tends to deal with logic, AI, and/or physics.
           </p>
         </section>
 
         <section id="interests">
           <h2>Interests</h2>
           <ul class="interest-list">
-            <li><strong>Physics:</strong></li>
-            <li><strong>Logic:</strong></li>
-            <li><strong>AI:</strong></li>
+            <li><strong>Physics</strong></li>
+            <li><strong>Logic</strong></li>
+            <li><strong>AI</strong></li>
           </ul>
         </section>
       </article>
 
       <aside class="right-column">
         <div class="photo-card-grid">
-          <img src="/Me_New_Photo.jpg" alt="James Squires" class="profile-photo">
-          
+          <img src="/Me_New_Photo.jpg" alt="James Squires" class="profile-photo-small">
           <div class="card">
-            <div class="card-title">Contact Information</div>
-            <address>
-              <strong>Email:</strong> <br>
-              firstnamelastnamehome (AT) gmail (DOT) com</a><br><br>
-              <strong>Majors:</strong> <br>
+            <div class="card-title">Contact</div>
+            <address class="meta">
+              <strong>Email:</strong><br>
+              firstnamelastnamehome (AT) gmail (DOT) com<br><br>
+              <strong>Majors:</strong><br>
               Physics & Mathematics, UGA<br><br>
-              <strong>Location:</strong> <br>
+              <strong>Location:</strong><br>
               Athens, GA, USA
             </address>
           </div>
@@ -243,14 +260,14 @@
     </div>
 
     <section id="disclaimer">
-      <p class="meta-notice">
+      <p class="meta">
         All opinions expressed on this website are my own and do not represent the views of the University of Georgia or any affiliated organization.
       </p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; <span id="year"></span> James Squires.</p>
+    &copy; <span id="year"></span> James Squires.
   </footer>
 
   <script>
