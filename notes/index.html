@@ -7,133 +7,186 @@
   <link rel="stylesheet" href="/css/style.css">
   <style>
     :root {
-      --bg: #ffffff;
-      --text: #222;
-      --accent: #0066cc;
-      --meta: #666;
-      --border: #eee;
+      --bg: #f7f7f8;
+      --fg: #111111;
+      --muted: #666666;
+      --accent: #2f5aac;
+      --card-bg: #ffffff;
+      --border: #e0e0e0;
+      --max-width: 880px;
     }
-
-    body {
-      font-family: "Georgia", serif;
-      line-height: 1.6;
-      color: var(--text);
-      background: var(--bg);
-      margin: 0;
-      padding: 0;
-    }
-
-    header, main, footer {
-      max-width: 750px;
-      margin: 0 auto;
-      padding: 2rem;
+    * {
       box-sizing: border-box;
     }
-
-    .nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 1rem;
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
     }
-
-    .nav-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-    }
-
-    .nav-links a {
-      margin-left: 1rem;
-      text-decoration: none;
+    a {
       color: var(--accent);
-      font-family: sans-serif;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    header {
+      border-bottom: 1px solid var(--border);
+      background-color: #ffffffcc;
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+    }
+    .nav-title {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.95rem;
+    }
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.75rem 1.25rem 3rem 1.25rem;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    h1, h2, h3 {
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+    }
+    h1 {
+      font-size: 1.9rem;
+      margin-bottom: 0.35rem;
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.35rem;
+    }
+    .subtitle {
+      font-size: 0.98rem;
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+    }
+    .home-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 1.25rem;
+    }
+    .card {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.1rem 1.25rem;
+    }
+    .card-title {
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    .meta {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+    .list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .list-item {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .list-item:last-child {
+      border-bottom: none;
+    }
+    .item-title {
+      font-weight: 500;
+      margin-bottom: 0.15rem;
+    }
+    .item-venue {
       font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .item-links {
+      font-size: 0.85rem;
+      margin-top: 0.2rem;
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.05rem 0.45rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-left: 0.35rem;
+    }
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1rem 1.25rem 1.5rem 1.25rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    @media (max-width: 720px) {
+      .home-layout {
+        grid-template-columns: 1fr;
+      }
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
+      }
+    }
+    #disclaimer {
+      text-align: center;
+    }
+    .photo-card-grid {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+    .profile-photo-small {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 11px;
+      border: 1px solid var(--border);
     }
 
+    /* Page-specific additions, kept minimal and consistent with the token system above */
     .epigraph {
       text-align: center;
       font-style: italic;
       letter-spacing: 0.15em;
-      color: var(--meta);
-      margin: 3rem 0;
-      font-size: 1.2rem;
+      color: var(--muted);
+      margin: 2.5rem 0 2rem 0;
+      font-size: 1.05rem;
     }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      border-left: 3px solid var(--accent);
-      padding-left: 1rem;
-      margin-top: 3rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .meta-disclaimer {
-      font-style: italic;
-      color: var(--meta);
-      font-size: 0.9rem;
-      margin-bottom: 2rem;
-    }
-
-    /* List Styling */
-    .list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .list-item {
-      margin-bottom: 2.5rem;
-    }
-
-    .item-title {
-      font-size: 1.2rem;
-      font-weight: bold;
-      line-height: 1.3;
-      margin-bottom: 0.3rem;
-    }
-
-    .item-venue {
-      font-family: sans-serif;
-      font-size: 0.85rem;
-      color: var(--meta);
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
-
-    .item-links {
-      font-size: 0.9rem;
-    }
-
-    .item-links a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-
-    .item-links a:hover {
-      text-decoration: underline;
-    }
-
     .doi {
       display: block;
-      font-family: monospace;
-      color: var(--meta);
-      font-size: 0.8rem;
-      margin-top: 0.3rem;
-    }
-
-    footer {
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--meta);
-      margin-top: 4rem;
-      border-top: 1px solid var(--border);
-      padding: 2rem 0;
+      font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.25rem;
     }
   </style>
 </head>
@@ -150,17 +203,17 @@
     </div>
   </header>
 
-  <main class="content">
+  <main>
     <div class="epigraph">ΠΑΝΤΑ ΡΕΙ</div>
 
     <h1>Technical Notes & Articles</h1>
+    <p class="subtitle">
+      All accuracy I credit to Lean4 typechecking and all misunderstandings I credit to myself.
+    </p>
 
     <section id="professional-notes">
       <h2>Professional Notes</h2>
-      <p class="meta-disclaimer">
-        All accuracy I credit to Lean4 typechecking and all misunderstandings I credit to myself.
-      </p>
-      
+
       <ul class="list">
         <li class="list-item">
           <div class="item-title">Basic Analysis in Lean4: A Walk Through</div>
@@ -169,61 +222,62 @@
             <a href="/LeanRealAnalysis.pdf" target="_blank">Download PDF</a>
           </div>
         </li>
-        
+
         <li class="list-item">
           <div class="item-title">Analysis of Rayleigh Number Sensitivity in Echo State Network Forecasting of Lorenz Systems</div>
           <div class="item-venue">December 2025</div>
           <div class="item-links">
-            <a href="/Lorenz63_ESN_Rho_Variation.pdf" target="_blank">Download PDF</a> • 
+            <a href="/Lorenz63_ESN_Rho_Variation.pdf" target="_blank">Download PDF</a> ·
             <a href="https://github.com/JamesSquires0/Lorenz_ESN_Rho_Variation" target="_blank">Source Code</a>
           </div>
           <span class="doi">DOI: 10.5281/zenodo.17915473</span>
         </li>
 
-     <li class="list-item">
-          <div class="item-title">Terrestrial Radius, Frenet-Serret Curvature, and Empirical Measurement Sensitivity: A Comment on Flat Earth Theory</div>
+        <li class="list-item">
+          <div class="item-title">Terrestrial Radius, Frenet–Serret Curvature, and Empirical Measurement Sensitivity: A Comment on Flat Earth Theory</div>
           <div class="item-venue">February 2026</div>
           <div class="item-links">
             <a href="/Addressing_Flat_Earth_Theory.pdf" target="_blank">Download PDF</a>
           </div>
         </li>
 
-          <li class="list-item">
+        <li class="list-item">
           <div class="item-title">A Brief Guide to Autoformalization in Mathematical Physics</div>
           <div class="item-venue">May 2026</div>
           <div class="item-links">
             <a href="/Naive_Summary_of_Automated_Theorem_Proving-1.pdf" target="_blank">Download PDF</a>
           </div>
         </li>
-          <li class="list-item">
-          <div class="item-title">The Geometry and Metric Tensor of a TrainedMultilayer Perceptron</div>
+
+        <li class="list-item">
+          <div class="item-title">The Geometry and Metric Tensor of a Trained Multilayer Perceptron</div>
           <div class="item-venue">May 2026</div>
           <div class="item-links">
             <a href="/Geometry_of_MLPs.pdf" target="_blank">Download PDF</a>
           </div>
         </li>
+
         <li class="list-item">
-          <div class="item-title">Heyting Algebras in Dedekind-MacneilleCompleted Causal Structure of MinkowskiSpace: a No-Go Theorem</div>
+          <div class="item-title">Heyting Algebras in Dedekind-MacNeille Completed Causal Structure of Minkowski Space: a No-Go Theorem</div>
           <div class="item-venue">May 2026</div>
           <div class="item-links">
             <a href="/Heyting_Causal_Logic_NO_GO (3).pdf" target="_blank">Download PDF</a>
           </div>
         </li>
-        </ul>
-        </section>
+      </ul>
+    </section>
 
-        <section id="slides">
-  
     <section id="articles">
       <h2>Articles & Essays</h2>
       <ul class="list">
         <li class="list-item">
-          <div class="item-title">A Contemporary Analysis of Archimedes’ Lever</div>
-          <div class="item-venue">December 2025 • The Interstellar Observer</div>
+          <div class="item-title">A Contemporary Analysis of Archimedes' Lever</div>
+          <div class="item-venue">December 2025 · The Interstellar Observer</div>
           <div class="item-links">
             <a href="https://www.theinterstellarobserver.com/articles/history/a-contemporary-analysis-of-archimedes-lever" target="_blank">Read Article &rarr;</a>
           </div>
         </li>
+      </ul>
     </section>
   </main>
 
